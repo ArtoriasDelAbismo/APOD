@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # NASA Astronomy Picture of the Day (APOD) App
 
 This app fetches the NASA Astronomy Picture of the Day (APOD) and stores it in a MongoDB database.
@@ -37,4 +37,4 @@ MONGO_URI=your-mongodb-uri
 API_KEY=your-nasa-api-key
 COLLECTION_NAME=apod-pictures
 ```
-=======
+
