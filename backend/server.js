@@ -7,15 +7,14 @@ import connectDB from './db.js';
 
 dotenv.config()
 const app = express()
-const PORT = 3000;
 app.use(cors({ origin: 'http://localhost:5173' }))
 
 let db;
 
 connectDB().then((database) => {
     db = database;
-    app.listen(PORT, ()=> {
-        console.log(`App listening at http://localhost:${PORT}`);
+    app.listen(process.env.PORT, ()=> {
+        console.log(`App listening at http://localhost:${process.env.PORT}`);
     })
 })
 
