@@ -12,11 +12,14 @@ app.use(cors({ origin: 'http://localhost:5173' }))
 let db;
 
 connectDB().then((database) => {
+    const PORT = process.env.PORT || 3001
     db = database;
-    app.listen(process.env.PORT, ()=> {
-        console.log(`App listening at http://localhost:${process.env.PORT}`);
+    app.listen(PORT, ()=> {
+        console.log(`App listening at http://localhost:${PORT}`);
     })
 })
+
+
 
 app.get('/store-picture', async (req, res) => {
     
